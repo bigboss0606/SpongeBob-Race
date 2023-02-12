@@ -79,14 +79,11 @@
                 /*BABYLON.SceneLoader.ImportMeshAsync(["Promontoir", "Sommet"], "/", "promontoir.glb", scene).then((result) => {
                     const base = scene.getMeshByName("Promontoir");
                     const sommet = scene.getMeshByName("Sommet");
-
                     const promontoir = BABYLON.Mesh.MergeMeshes([base, sommet], true, true, null, false, true);
                     promontoir.position = new BABYLON.Vector3(2, 0, -2);
                     promontoir2 = promontoir.clone("promontoir2");
                     promontoir.position = new BABYLON.Vector3(-2, 0, -2);
                 });
-
-
                 BABYLON.SceneLoader.ImportMesh("", "/", "gameboy.glb", scene, function(newMeshes){
                     const gameboy = newMeshes[0];
                     gameboy.scaling = new BABYLON.Vector3(0.3, 0.3, 0.3);
@@ -94,13 +91,10 @@
                     gameboy.rotation.y = - Math.PI / 2;
                     gameboy.position = new BABYLON.Vector3(2, 0.55, -2);
                 });
-
-
                 BABYLON.SceneLoader.ImportMeshAsync(["Fiole", "Contenu", "Bouchon"], "/", "fiole.glb", scene).then((result) => {
                     const fiole = scene.getMeshByName("Fiole");
                     const contenu = scene.getMeshByName("Contenu");
                     const bouchon = scene.getMeshByName("Bouchon");
-
                     var glass = new BABYLON.PBRMaterial("glass", scene);
                     glass.indexOfRefraction = 0.52;
                     glass.alpha = 0.5;
@@ -112,12 +106,11 @@
                     glass.reflectivityColor = new BABYLON.Color3(0.2, 0.2, 0.2);
                     glass.albedoColor = new BABYLON.Color3(0.95, 0.95, 0.95);
                     fiole.material = glass;
-
                     const potion = BABYLON.Mesh.MergeMeshes([fiole, contenu, bouchon], true, true, null, false, true);
                     potion.position = new BABYLON.Vector3(-2, 0.55, -2);
                 });*/
 
-                BABYLON.SceneLoader.ImportMesh("", "https://github.com/bigboss0606/SpongeBob-Race/blob/main/", "chateau.glb", scene, function(newMeshes){
+                BABYLON.SceneLoader.ImportMesh("", "test/", "chateau.glb", scene, function(newMeshes){
                     const muraille = scene.getMeshByName("Muraille");
                     const manoir = scene.getMeshByName("Manoir");
                 });
@@ -141,7 +134,7 @@
 
 
                 // Load hero character
-                BABYLON.SceneLoader.ImportMesh("", "https://github.com/bigboss0606/SpongeBob-Race/blob/main/", "spongebob.glb", scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
+                BABYLON.SceneLoader.ImportMesh("", "test", "spongebob.glb", scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
                     var hero = newMeshes[0];
                     camera.target = hero;
                     hero.position = new BABYLON.Vector3(10, 0, 10);
