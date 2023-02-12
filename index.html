@@ -117,7 +117,7 @@
                     potion.position = new BABYLON.Vector3(-2, 0.55, -2);
                 });*/
 
-                BABYLON.SceneLoader.ImportMesh("", "", "chateau.glb", scene, function(newMeshes){
+                BABYLON.SceneLoader.ImportMesh("", "test/", "chateau.glb", scene, function(newMeshes){
                     const muraille = scene.getMeshByName("Muraille");
                     const manoir = scene.getMeshByName("Manoir");
                 });
@@ -141,7 +141,7 @@
 
 
                 // Load hero character
-                BABYLON.SceneLoader.ImportMesh("", "", "spongebob.glb", scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
+                BABYLON.SceneLoader.ImportMesh("", "test", "spongebob.glb", scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
                     var hero = newMeshes[0];
                     camera.target = hero;
                     hero.position = new BABYLON.Vector3(10, 0, 10);
